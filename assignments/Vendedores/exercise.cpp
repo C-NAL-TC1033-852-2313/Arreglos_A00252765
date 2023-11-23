@@ -24,6 +24,21 @@ void cargaDatosDepartamentos(Depto listaDeptos[], int &cantDeptos) {
       con el número de departamentos cargados del archivo*/
     int numDepartamento;
     string nombreDepartamento;
+    cantDeptos = 0;   // al inicio no hay ningún departamento en el arreglo listaDeptos
+    ifstream archivo;    // para leer datos de un archivo (input file stream)
+    archivo.open("Deptos.txt");
+    if(archivo.is_open()){
+        //Leo mientras haya datos que leer
+        while ( archivo >> numDepartamento >> nombreDepartamento ) {
+            listaDeptos[cantDeptos].setIdDep(numDepartamento);
+            listaDeptos[cantDeptos].setNombre(nombreDepartamento);
+            cantDeptos++;
+        }
+        archivo.close();
+    }
+    else{
+        cout << "No se pudo abrir el archivo" << endl;
+    }
 
 }
 
