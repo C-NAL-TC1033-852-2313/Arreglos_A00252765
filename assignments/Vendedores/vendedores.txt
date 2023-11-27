@@ -1,0 +1,4 @@
+Fabiola_Uribe 1000.50 11
+Luis_Dominguez 500.99 22
+Juanita_Tamez 300.75 55
+Pedro_Sanchez 12000.12 33
